@@ -1,8 +1,10 @@
 # salad_app
 
+A new Flutter Salad application. Designed and Code with Flutter by Nobelleon Mahardhika
 
+Project Starter Code
 
-## Getting Started
+- flutter_salad_app.zip get file
 
 This project is a starting point for a Flutter application.
 
