@@ -1,6 +1,63 @@
 # salad_app
 
-A new Flutter project.
+class LayarUtama extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      floatingActionButton: Container(
+        padding: EdgeInsets.all(10),
+        height: 60,
+        width: 60,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: nPrimaryColor.withOpacity(.26),
+        ),
+        child: Container(
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: nPrimaryColor,
+          ),
+          child: WebsafeSvg.asset(
+            "assets/icons/plus.svg",
+          ),
+        ),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 20, top: 50),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: WebsafeSvg.asset("assets/icons/menu.svg", height: 11),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              "Cara sederhana menemukan \nSalad enak",
+              style: Theme.of(context)
+                  .textTheme
+                  .headline
+                  .copyWith(color: nCyanColor, fontSize: 21),
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                JudulKategori(
+                  judul: "Semua",
+                  aktif: true,
+                ),
+                JudulKategori(judul: "Italy"),
+                JudulKategori(judul: "Perancis"),
+                JudulKategori(judul: "Jepang"),
+                JudulKategori(judul: "Asia"),
+              ],
+            ),
+          ),
 
 ## Getting Started
 
